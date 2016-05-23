@@ -12,14 +12,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
-
 <body ng-app="ContactApp">
   
-
 <div class="row">
 
-  <div class="col s3 content-nav">
-
+  <div class="col s3 content-nav" ng-controller="NavCtrl">
 
     <div class="row">
 
@@ -29,10 +26,8 @@
     
       <div class="col s12 white nav-lower">
         <div class="nav-side-items">
-        <ul class="" id="">
-          <li class=""><a href="add.html"><i class="fa fa-plus" aria-hidden="true"></i><span>Add</span></a></li>
-          <li class=""><a href="favorites.html"><i class="fa fa-star" aria-hidden="true"></i><span>Favorites</span></a></li>
-          <li class=""><a href="list.html"><i class="fa fa-list" aria-hidden="true"></i><span>List All Contacts</span></a></li>
+        <ul class="" id="" ng-repeat="items in navItems">
+          <li class=""><a ng-href="{{items.url}}"><i class="fa fa-{{items.class}}" aria-hidden="true"></i><span>{{items.name}}</span></a></li>
         </ul>
         </div>
       </div>
@@ -41,17 +36,12 @@
 
   </div>
 
-  <div class="col s9 white content-body">
-    <h2>test</h2>
-    <p>more test</p>
+  <div class="col s9 white content-body" ng-view>
+  
   </div>
 
 
 </div>
-
-
-
-
 
   <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="lib/node_modules/materialize-css/dist/js/materialize.min.js"></script>
@@ -59,5 +49,7 @@
   <script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
   <script type="text/javascript" src="app/app.js"></script>
   <script type="text/javascript" src="app/controllers/NavCtrl.js"></script>
+  <script type="text/javascript" src="app/controllers/ItemListCtrl.js"></script>
+  <script type="text/javascript" src="app/controllers/ItemNewCtrl.js"></script>
 </body>
 </html>

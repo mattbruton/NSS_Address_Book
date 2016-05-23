@@ -4,13 +4,16 @@ app.controller("NavCtrl", function($scope) {
   $scope.navItems = [
   {
     name: "Add Contact",
-    url: '#/add'
+    url: '#/items/new',
+    class: 'plus'
   },{
-    name: "List Contacts",
-    url: '#/list'
+    name: "List All Contacts",
+    url: '#/items/list',
+    class: 'list'
   }, {
     name: "Favorites",
-    url: '#/favorties'
+    url: '#/items/favorties',
+    class: 'star'
   }
   ];
 });

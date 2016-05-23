@@ -1,0 +1,19 @@
+<div class="col s6 offset-s3 new-heading">
+  <h3>View Contacts</h3>
+</div>
+
+<div class="row">
+  <div class="col s6 offset-s3 input-field">
+    <input type="text" class="col s8 offset-s2" placeholder="Search for..." ng-model="searchText"></input>
+  </div>
+</div>
+
+<ul class="collection">
+    <li class="collection-item avatar" ng-repeat="item in items | filter: searchText">
+      <img src="images/{{item.imgUrl}}.jpg" alt="" class="circle">
+      <span class="title">{{item.firstName}} {{item.lastName}}</span>
+      <p>{{item.cellTel}}<br>{{item.email}}</p>
+      <a href="#!" class="secondary-content"><i class="material-icons col-icon">grade</i></a>
+    </li>
+</ul>
+

@@ -1,0 +1,59 @@
+@import "../modules/colors";
+
+/* label color */
+.input-field label {
+  color: #000;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: $blue;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid $blue;
+  box-shadow: 0 1px 0 0 $lightblue;
+}
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: $blue;
+}
+  
+/* email label focus color */
+.input-field input[type=email]:focus + label {
+  color: $blue;
+}
+/* email label underline focus color */
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid $blue;
+  box-shadow: 0 1px 0 0 $lightblue;
+}
+
+/* password label focus color */
+.input-field input[type=password]:focus + label {
+  color: $blue;
+}
+/* password label underline focus color */
+.input-field input[type=password]:focus {
+  border-bottom: 1px solid $blue;
+  box-shadow: 0 1px 0 0 $lightblue;
+}
+
+/* tel label focus color */
+.input-field input[type=tel]:focus + label {
+  color: $blue;
+}
+/* tel label underline focus color */
+.input-field input[type=tel]:focus {
+  border-bottom: 1px solid $blue;
+  box-shadow: 0 1px 0 0 $lightblue;
+}
